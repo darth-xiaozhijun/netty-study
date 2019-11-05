@@ -57,9 +57,10 @@ public class Server {
 				String readMessage = null;
 				while(true){
 					System.out.println("server reading... ");
-					if((readMessage = reader.readLine()) == null){
-						break;
-					}
+					readMessage = reader.readLine();
+//					if((readMessage = reader.readLine()) == null){
+//						break;
+//					}
 					System.out.println(readMessage);
 					writer.println("server recive : " + readMessage);
 					writer.flush();
